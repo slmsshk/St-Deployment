@@ -3,8 +3,11 @@ import streamlit as st
 import base64
 import os
 # st.title("i was crat4ed on 27/10/2022")
+os.chdir('app4')
 # Configure Page
 st.set_page_config(page_title="Home Page",page_icon='data\icon.jpg',layout='wide')
+st.write(os.getcwd())
+
 st.write(os.listdir())
 # Add Title
 def title(url):
@@ -15,7 +18,8 @@ title("Disco Dancer")
 
 """### gif from local file"""
 col1,col2,col3=st.columns(3)
-file_ = open("app4\data\jimmy.gif", "rb")
+path="data\jimmy.gif"
+file_ = open(path, "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
@@ -25,5 +29,6 @@ col2.markdown(
     unsafe_allow_html=True,
 )
 
+# print('bhadve')
 
 
