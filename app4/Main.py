@@ -15,7 +15,7 @@ title("Disco Dancer")
 
 """### gif from local file"""
 col1,col2,col3=st.columns(3)
-file_ = open("data\jimmy.gif", "rb")
+file_ = open("\data\jimmy.gif", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
