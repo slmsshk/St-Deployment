@@ -5,6 +5,21 @@ import base64
 # Configure Page
 st.set_page_config(page_title="Home Page",page_icon='data\icon.jpg',layout='wide')
 
+def add_bg_from_url(URL):
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url('https://indianmemetemplates.com/wp-content/uploads/dog-bites-Mithun-768x512.jpg');
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+add_bg_from_url('https://indianmemetemplates.com/wp-content/uploads/dog-bites-Mithun-768x512.jpg')
+
 st.title("i was created on 27/10/2022")
 
 # Add Title
